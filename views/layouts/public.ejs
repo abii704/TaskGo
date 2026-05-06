@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="corporate">
+
+<%- include('__head',{title}) %>
+
+
+<body class="bg-base-100 min-h-screen">
+  <div class="navbar bg-base-100 shadow-sm px-8">
+    <div class="flex-1">
+      <a href="/" class="text-xl font-bold text-primary">TaskGo</a>
+    </div>
+
+    <div class="flex-none gap-2">
+      <a href="/login" class="btn btn-ghost">Login</a>
+      <a href="/register" class="btn btn-primary">Register</a>
+    </div>
+  </div>
+
+  <main>
+    <%- body %>
+  </main>
+
+  <footer class="footer footer-center bg-base-200 text-base-content p-6 mt-20">
+    <aside>
+      <p>© <%= new Date().getFullYear() %> TaskGo. All rights reserved.</p>
+    </aside>
+  </footer>
+</body>
+
+</html>

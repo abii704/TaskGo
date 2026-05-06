@@ -1,0 +1,72 @@
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+  <div>
+    <h1 class="text-3xl font-bold">Buyer Profile</h1>
+    <p class="text-base-content/60">
+      Informasi profil buyer.
+    </p>
+  </div>
+
+  <a href="/buyer/profile/edit" class="btn btn-primary">
+    Edit Profile
+  </a>
+</div>
+
+<div class="card bg-base-100 shadow max-w-4xl">
+  <div class="card-body">
+    <h2 class="card-title">Profile Information</h2>
+
+    <div class="overflow-x-auto">
+      <table class="table">
+        <tr>
+          <th class="w-44">Full Name</th>
+          <td><%= buyerProfile.fullName || '-' %></td>
+        </tr>
+
+        <tr>
+          <th>Email</th>
+          <td><%= buyerProfile.User?.email || '-' %></td>
+        </tr>
+
+        <tr>
+          <th>Phone Number</th>
+          <td><%= buyerProfile.phoneNumber || '-' %></td>
+        </tr>
+
+        <tr>
+          <th>Address</th>
+          <td><%= buyerProfile.address || '-' %></td>
+        </tr>
+
+              <tr>
+          <th class="w-44 align-middle">Avatar</th>
+          <td class="align-middle">
+            <div class="avatar">
+              <div class="w-20 h-20 rounded-[24px] border-2 border-black p-1 bg-white shadow-md flex items-center justify-center overflow-hidden">
+                <div class="w-full h-full rounded-[18px] overflow-hidden bg-base-200">
+                  <% if (buyerProfile.avatarUrl && buyerProfile.avatarUrl !== '-') { %>
+                    <img src="<%= buyerProfile.avatarUrl %>" class="w-full h-full object-cover" alt="Profile" />
+                  <% } else { %>
+                    <img src="https://ui-avatars.com<%= buyerProfile.fullName || 'User' %>&background=641ae6&color=fff&bold=true&size=128" class="w-full h-full" />
+                  <% } %>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+        <tr>
+          <th>Created At</th>
+          <td><%= buyerProfile.createdAt ? buyerProfile.createdAt.toLocaleString("id-ID") : '-' %></td>
+        </tr>
+
+        <tr>
+          <th>Updated At</th>
+          <td><%= buyerProfile.updatedAt ? buyerProfile.updatedAt.toLocaleString("id-ID") : '-' %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
