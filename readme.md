@@ -133,8 +133,3 @@ Mode development:
 npm run dev
 ```
 
----
-
-## Author
-
-Created by **Brahmantio Diaz**.
