@@ -55,7 +55,7 @@ TaskGo adalah aplikasi web berbasis **Express.js, EJS, PostgreSQL, dan Sequelize
 Clone repository:
 
 ```bash
-git clone https://github.com/brahmantiodiaz/TaskGo.git
+git clone https://github.com/abii704/TaskGo.git
 cd TaskGo
 ```
 
